@@ -1,0 +1,26 @@
+﻿@using TatilSeyhatProje.Models.Sınıflar
+@model List<Hakkımızda> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h2>Hakkımızda</h2>
+
+            @foreach (var x in Model)
+            {
+                <img src="@x.FotoUrl" alt="" style="margin-left:200px;" />
+                <h1>BU PROJE MVC5 İLE CODE FİRST YAPISI KULLANILARAK TAMAMEN YASİN BULUT TARAFINDAN HAZIRLANMIŞTIR</h1>
+                <p>
+                    Seyahat etmeyi seviyor ve sık sık seyahate çıkıyorsanız başvurabileceğiniz kaynakları çoktan keşfetmişsinizdir muhtemelen. Ancak seyahat konusunda henüz yeterli deneyiminiz yoksa ve üstelik de dünya turuna çıkacağım diyorsanız oldukça çok bilgiye ihtiyacınız olacağı kesin. Dünya turu nedir, nasıl seyahat edilir, ekonomik gezebilir miyim, hangi ülkelere gitmeliyim, rotamı nasıl belirlemeliyim, nasıl ucuza konaklarım, paramı nasıl taşırım, vize bilgilerini nereden bulabilir, zamanı ve parayı daha verimli nasıl kullanırım… gibi sorular aklınızı kurcalıyorsa doğru yerdesiniz.
+
+                    Benim gibi gezginlere bir sırt çantası, bir pasaport verin yeterli, ancak kısıtlı zamanı olanların gidecekleri yer hakkında araştırma ve planlama yapmasını tavsiye ediyorum. Dersini iyi çalışmak için doğru sayfadasın. Aklında uçuşan binlerce soruya cevap verecek tüm kaynakları bir araya topladım. Tüm sorularına cevaplar bu kaynağın içerisinde, ama bunun için emek göstermek zorundasın.
+                </p>
+            }
+
+        </div>
+    </div>
+</div>
+

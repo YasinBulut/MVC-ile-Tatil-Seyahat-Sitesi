@@ -1,0 +1,35 @@
+﻿@using TatilSeyhatProje.Models.Sınıflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLoyout.cshtml";
+}
+<br />
+<h2>Blog Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BAŞLIK</th>
+            <th>TARİH</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+            <th>DETAYLAR</th>
+        </tr>
+    </thead>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Baslik</td>
+            <td>@x.Tarih</td>
+            <td><a  href="/Admin/BlogSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a  href="/Admin/BlogGetir/@x.ID" class="btn btn-success">GÜNCELLE</a></td>
+            <td><a  href="#" class="btn btn-info">DETAYLAR</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Admin/YeniBlog/" class="btn btn-primary">Yeni Blog</a>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
